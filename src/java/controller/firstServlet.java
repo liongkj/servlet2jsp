@@ -42,8 +42,9 @@ public class firstServlet extends HttpServlet {
                 request.getRequestDispatcher("welcome.jsp").forward(request,response);
             }
             else{
+            request.getRequestDispatcher("fisrtjsp.jsp").include(request, response);
             out.println("<h1>Sorry " + name + ", wrong password</h1>");
-            request.getRequestDispatcher("firstjsp.jsp").include(request, response);
+            
             }
         }
     }
